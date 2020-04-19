@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ucu:
+    build: .
+    environment:
+      - "PORT:5001"
+    ports:
+      - "5001:5001"
