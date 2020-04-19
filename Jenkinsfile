@@ -11,7 +11,7 @@ node ('master'){
     }
     stage('Pull-image-server'){
         sh 'echo Pull-image-server'
-        sh "docker-compose up -d"
+        sh "sudo docker-compose up -d"
     }
 }
 
