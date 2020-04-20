@@ -11,6 +11,7 @@ node ('master'){
     }
     stage('Pull-image-server'){
         sh 'echo Pull-image-server'
+        sh 'whoami'
         sh "docker-compose up -d"
     }
 }
