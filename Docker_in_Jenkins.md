@@ -9,3 +9,5 @@ sudo docker run --name jenkins -p 47315:8080 -p 50000:50000 -v /var/run/docker.s
 그리고 su jenkins 한다음 docker info 해서 잘 나오나 확인
 
 젠킨스가 스크립트 돌리는 유저가 jenkins라서 root가 아닌 일반 사용자가 sudo 없이 도커를 사용할 수 있도록 설정해주는 작업이었음.
+
+"proxy": "http://localhost:4000" package.json에 넣으면 fetch 앞에 주소 안바꿔도 된다.
