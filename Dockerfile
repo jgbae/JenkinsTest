@@ -7,6 +7,7 @@ RUN apt-get install -y nodejs
 RUN npm cache clean -f && npm install -g n && n stable
 RUN curl -L https://npmjs.org/install.sh | sh && npm update -g npm
 
+
 COPY . /usr/src/react
 WORKDIR /usr/src/react
 CMD npm start
