@@ -6,9 +6,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash --
 RUN apt-get install -y nodejs
 RUN npm cache clean -f && npm install -g n && n stable
 RUN curl -L https://npmjs.org/install.sh | sh && npm update -g npm
-
-COPY . /usr/src
-WORKDIR /usr/src/
+RUN npm install -g create-react-app
 RUN create-react-app ucu
 WORKDIR /usr/src/ucu
 COPY . /usr/src/ucu
