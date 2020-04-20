@@ -7,7 +7,6 @@ RUN apt-get install -y nodejs
 RUN npm install -g npm@latest
 RUN npm install -g create-react-app && npm install -g react-scripts
 RUN create-react-app ucu
-RUN cd /usr/src/ucu
 WORKDIR /usr/src/ucu
 COPY . /usr/src/ucu
 CMD npm start
