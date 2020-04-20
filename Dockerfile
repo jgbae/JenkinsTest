@@ -8,6 +8,7 @@ RUN npm cache clean -f && npm install -g n && n stable
 RUN curl -L https://npmjs.org/install.sh | sh && npm update -g npm
 
 COPY . /usr/src
+WORKDIR /usr/src/
 RUN create-react-app ucu
 WORKDIR /usr/src/ucu
 COPY . /usr/src/ucu
