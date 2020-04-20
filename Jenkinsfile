@@ -11,6 +11,7 @@ node ('master'){
     }
     stage('Pull-image-server'){
         sh 'echo Pull-image-server'
+        sh 'export DOCKER_HOST=127.0.0.1'
         sh "docker-compose up -d"
     }
 }
