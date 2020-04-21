@@ -14,4 +14,3 @@ node ('master'){
         sh "docker-compose up -d"
     }
 }
-
