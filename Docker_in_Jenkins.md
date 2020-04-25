@@ -1,5 +1,13 @@
 jenkins 도커에 얹어서 사용할 때 도커 컨테이너 내부에서 도커를 호출해야함.
 
+일단 도커 컴포즈 깔려있나보고 안까렬있으면
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+그다음
+
 sudo docker run --name jenkins -p 47315:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v $(which docker-compose):/usr/local/bin/docker-compose -v /home/jgbae/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 
 이렇게 했음 -v /home/jgbae/jenkins_home:/var/jenkins_home 이게 물리적으로 저장소 위치 저장하는거라서 이거 중첩 안되게 하셈. 이거 때문에 기존꺼 다날림
