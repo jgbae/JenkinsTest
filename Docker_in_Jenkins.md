@@ -19,3 +19,7 @@ sudo docker run --name jenkins -p 47315:8080 -p 50000:50000 -v /var/run/docker.s
 젠킨스가 스크립트 돌리는 유저가 jenkins라서 root가 아닌 일반 사용자가 sudo 없이 도커를 사용할 수 있도록 설정해주는 작업이었음.
 
 "proxy": "http://localhost:4000" package.json에 넣으면 fetch 앞에 주소 안바꿔도 된다.
+
+
+ 백엔드 도커로 할때 명령어 docker run --net="host" --name ucu_backend -p 6000:6000 -v backend_home:/var/backend_home ucu_backend
+ 
